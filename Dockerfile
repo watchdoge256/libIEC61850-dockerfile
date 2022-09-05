@@ -16,6 +16,4 @@ RUN tar -xvf /service/libiec61850-1.5.1.tar.gz -C /service/
 RUN rm /service/libiec61850-1.5.1.tar.gz
 RUN make -j 4 -C service/libiec61850-1.5.1/examples/server_example_basic_io all target=LINUX
 EXPOSE 102/tcp
-#COPY ./run_server.sh /run_server.sh
 ENTRYPOINT ["service/libiec61850-1.5.1/examples/server_example_basic_io/server_example_basic_io", "&"]
-#run_server.sh

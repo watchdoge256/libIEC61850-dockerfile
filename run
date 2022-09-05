@@ -1,0 +1,1 @@
+sudo docker run -d --rm --name mylib61850 lib61850:latest
